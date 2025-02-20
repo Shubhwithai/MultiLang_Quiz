@@ -14,6 +14,8 @@ st.set_page_config(
 with st.sidebar:
     st.title("Quiz Settings")
     st.markdown("Generate quizzes in multiple languages using Mistral Saba!")
+    st.markdown("**Powered by** [Educhain](https://github.com/satvik314/educhain)")
+    st.write("❤️ Built by [Build Fast with AI](https://buildfastwithai.com/genai-course)")
     st.markdown("---")
 
     language_choice = st.selectbox(
