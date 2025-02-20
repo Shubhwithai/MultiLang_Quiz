@@ -18,8 +18,6 @@ with st.sidebar:
     st.write("❤️ Built by [Build Fast with AI](https://buildfastwithai.com/genai-course)")
     st.markdown("---")
 
-    st.markdown("---")
-
     openrouter_api_key = st.text_input("Enter your OpenRouter API Key:", type="password")
     if not openrouter_api_key:
         st.warning("Please enter your OpenRouter API key to use Mistral Saba.")
