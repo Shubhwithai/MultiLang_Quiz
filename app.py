@@ -4,7 +4,7 @@ from langchain_openai import ChatOpenAI
 
 # --- App Configuration ---
 st.set_page_config(
-    page_title="Multilingual Quiz Generator (Mistral Saba)",
+    page_title="Educhain Multilingual Quiz Generator",
     page_icon="🌍",
     layout="wide",
     initial_sidebar_state="expanded"
