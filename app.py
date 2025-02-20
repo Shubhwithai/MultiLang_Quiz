@@ -18,6 +18,22 @@ with st.sidebar:
     st.write("❤️ Built by [Build Fast with AI](https://buildfastwithai.com/genai-course)")
     st.markdown("---")
 
+    st.markdown("---")
+
+    openrouter_api_key = st.text_input("Enter your OpenRouter API Key:", type="password")
+    if not openrouter_api_key:
+        st.warning("Please enter your OpenRouter API key to use Mistral Saba.")
+        mistral_saba_model = None
+    else:
+        mistral_saba_model = ChatOpenAI(
+            model="mistralai/mistral-saba",
+            openai_api_key=openrouter_api_key,
+            openai_api_base="https://openrouter.ai/api/v1"
+        )
+        st.success("OpenRouter API Key configured!")
+
+    st.markdown("---")
+
     language_choice = st.selectbox(
         "Select Language:",
         ["English", "Hindi", "Tamil", "Malayalam"],
@@ -37,22 +53,6 @@ with st.sidebar:
                              placeholder=f"e.g., {topic_map[language_choice]}")
 
     num_questions = st.slider("Number of Questions:", min_value=1, max_value=10, value=5)
-
-    st.markdown("---")
-
-    openrouter_api_key = st.text_input("Enter your OpenRouter API Key:", type="password")
-    if not openrouter_api_key:
-        st.warning("Please enter your OpenRouter API key to use Mistral Saba.")
-        mistral_saba_model = None
-    else:
-        mistral_saba_model = ChatOpenAI(
-            model="mistralai/mistral-saba",
-            openai_api_key=openrouter_api_key,
-            openai_api_base="https://openrouter.ai/api/v1"
-        )
-        st.success("OpenRouter API Key configured!")
-
-    st.markdown("---")
 
     if st.button("Generate Quiz"):
         if quiz_topic and mistral_saba_model:
