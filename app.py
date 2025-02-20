@@ -63,7 +63,7 @@ with st.sidebar:
         st.session_state.generate_quiz = False
 
 # --- Main App Content ---
-st.title("🌍 Multilingual Quiz Generator (Mistral AI Saba)")
+st.title("🌍 Educhain Multilingual Quiz Generator")
 st.markdown("Generate quizzes in English, Hindi, Tamil, and Malayalam powered by Mistral AI Saba!")
 
 if st.session_state.generate_quiz and quiz_topic and mistral_saba_model:
