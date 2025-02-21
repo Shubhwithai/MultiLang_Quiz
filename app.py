@@ -29,7 +29,9 @@ with st.sidebar:
             openai_api_base="https://openrouter.ai/api/v1"
         )
         st.success("OpenRouter API Key configured!")
-
+        
+    st.markdown("---")
+    
     language_choice = st.selectbox(
         "Select Language:",
         ["English", "Hindi", "Tamil", "Malayalam"],
