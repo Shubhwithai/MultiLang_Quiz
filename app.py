@@ -30,8 +30,6 @@ with st.sidebar:
         )
         st.success("OpenRouter API Key configured!")
 
-    st.markdown("---")
-
     language_choice = st.selectbox(
         "Select Language:",
         ["English", "Hindi", "Tamil", "Malayalam"],
